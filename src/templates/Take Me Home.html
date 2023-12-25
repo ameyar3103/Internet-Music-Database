@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+    <head><title>Take Me Home</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='songs.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fasthand&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <div class="logo">
+                <img class="logo-pic "src="{{url_for('static',filename='one8 logo.png')}}">
+            </div>
+            <div class="album-header" >
+                <div class="album-logo-div"><img class="album-logo" src="{{url_for('static',filename='Take Me Home.jpeg')}}"></div>
+                <div class="head-content"> <div class="album-name">Take Me Home</div>
+                        <div class="Singer-name"> &emsp;&emsp;&emsp;&emsp;
+                            One Direction
+                            <div class="singer-img">
+                                <img class="image" src="https://www.glasseyeinc.com/wp-content/uploads/2015/01/One-Direction-Where-We-Are-Portfolio-662.jpg">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="navi-bar">
+                <div class="navi-div">
+                   <a class="navi-text" href="{{url_for('home')}}">Home</a>
+                </div>
+                <div class="navi-div">
+                    <a class="navi-text" href="{{url_for('tryy')}}">Artists</a>
+                 </div>
+                 <div class="navi-div">
+                    <a class="navi-text" href="{{url_for('about')}}">About</a>
+                 </div>
+                 <div class="navi-div">
+                    <a class="navi-text" href="{{url_for('search')}}">Search</a>
+                 </div>
+                 <div class="navi-div">
+                    <a class="navi-text" href="{{url_for('spotlight')}}">Spotlight</a>
+                 </div>
+                 <div class="navi-div">
+                    <a class="navi-text" href="{{url_for('play')}}">Playlist</a>
+                 </div>
+            </div>
+           <div class="rows">
+           <div class="sr-no">
+               <div class="header">Sr.No</div>
+               <div>1</div>
+               <div>2</div>
+               <div>3</div>
+               <div>4</div>
+               <div>5</div>
+           </div>
+           <div class="song-name">
+            <div class="header">Song Name</div>
+               <div class="song1">Live While We're Young</div>
+               <div class="song2">Kiss You</div>
+               <div class="song3">Little Things</div>
+               <div class="song4">C'mon,C'mon</div>
+               <div class="song5">Last First Kiss</div>
+           </div>
+           <div class="duration">
+            <div class="header">Duration</div>
+             <div>3:20</div>
+             <div>3:03</div>
+             <div>3:39</div>
+             <div>2:44</div>
+             <div>3:23</div>
+           </div>
+           <div class="Add">
+            <div class="header">Playlist</div>
+            <div class="button-div"><button class="add1">Add</button></div>
+            <div class="button-div"><button class="add2">Add</button></div>
+            <div class="button-div"><button class="add3">Add</button></div>
+            <div class="button-div"><button class="add4">Add</button></div>
+            <div class="button-div"><button class="add5">Add</button></div>
+           </div>
+           </div>
+           <div class="footer">
+            <div class="foot">
+                <a href="{{url_for('about')}}">About</a>
+            </div>
+            <div>
+                Created by Ok_18..A Virat Kohli Fan Club!
+            </div>
+        </div>
+        <script src="{{url_for('static',filename='navbarsong.js')}}"></script>
+        <script src="{{url_for('static',filename='songs.js')}}"></script>
+        </body>
+    
+</html>

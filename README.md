@@ -1,142 +1,150 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/uO3FBJhb)
-Directory structure:
-The Directory submitted contains a README.md (this file),an assumptions.md and a 'src' folder which contains all the webpages,CSS files and photos that are needed in the webpages.
-*The above structure follows the structure mentioned in the task-document provided. *
+For this phase of the project, we have used sql and flask to implement a playlist page and also used some javascript to send post and get requests to the server. The database is named playlist.db and has a table named playlist with columns song_name which stores song names,album_name which stores album names and id which is an integer unique to each song. We have made sure that the same song is not added twice to the database and also made necessary changes so that the images and css files are accessible by main.py from static folder.All html files are stored in templates folder so that main.py can access it through render_template.
 
-How to open the website for evaluations:
-Firstly, the src folder contains a 'home.html' file which is the Home Page for the site which contains the Top Artists, Top Albums and Top Songs section containing 3 items/section.
-In order to navigate to any of the other pages,you simply need to click on the text using the cursor.
-The about page contains information on the site and the creators.
-From the home page,you can navigate to the Artists page, About Page(option given on navigation bar),any of the artist's album page by clicking on the artist name under Top-Artists section, any of the album's song page by clicking on the album name under Top-Albums section.
-On the Artists page, click on the Artist name to go to the albums by the artist.
-On the Albums page,click on the Album name to go to the song page of the corresponding album.
 
-NOTE: We have also included a songs.html which is a generalised song page (just as a sample).
-The typing effect has been added on the About page.
-The hover effect is implemented on the navigation bar and it changes the background color of the buttons.
-The zoom-in/zoom-out effect on the image is triggered when page loads and stops after some time(intentionally done like that).
-The search page and spotlight page options are added on navigation bar as mentioned.
+NOTE:Some of the css may not work on some browsers like Mozilla Firefox but mostly works on Google Chrome. Also since the work was done by two people on their respective devices, there is a need to zoom-in/zoom-out for certain pages for proper display. Kindly consider the same.
+
+
+We have tried to give our best to make the site as user-friendly as possible and easy to access. The codebase is pretty readable and easy to understand. All javascript files have also been added to static folder under src.
+
+
+Directory Structure:
+The directory maintains a simple structure having a README.md, an assumptions.md and a src. The src contains a sql database file playlist.db, a flask app file main.py and static,templates folder.
+The templates have html pages. The static has css files,images and javascript files.
+
+
+How To Open Our Website:
+Firstly,run the main.py file inside src and go to the link given by the file. This will direct you to the home page of our website. Then you can proceed normally.
+
+
 ```
 .
 ├── assumptions.md
 ├── README.md
 └── src
-    ├── 1d1.jpg
-    ├── 1d2.webp
-    ├── 1d3.png
-    ├── 1d4.jpg
-    ├── 1direction_album.html
-    ├── 1direction.jpg
-    ├── about.css
-    ├── about.html
-    ├── Ameya.jpg
-    ├── Arijit.jpeg
-    ├── Ashwin.jpeg
-    ├── dragons-1.html
-    ├── dragons1.jpeg
-    ├── dragons-2.html
-    ├── dragons2.jpeg
-    ├── dragons-3.html
-    ├── dragons3.jpg
-    ├── dragons-4.html
-    ├── dragons4.png
-    ├── dragons-5.html
-    ├── dragons5.jpg
-    ├── dragons_album.html
-    ├── dragons.jpg
-    ├── ed-1.html
-    ├── ed1.png
-    ├── ed-2.html
-    ├── ed2.png
-    ├── ed-3.html
-    ├── ed3.png
-    ├── ed-4.html
-    ├── ed4.png
-    ├── ed-5.html
-    ├── ed5.png
-    ├── ed_album.html
-    ├── Ed.jpeg
-    ├── ed.jpg
-    ├── Fearless.html
-    ├── Fearless.jpeg
-    ├── Folklore.html
-    ├── Folklore.jpeg
-    ├── Four.html
-    ├── Four.jpeg
-    ├── home.html
-    ├── It Won't Be Soon Before.html
-    ├── It Won't Be Soon Before.jpeg
-    ├── Jordi.html
-    ├── Jordi.jpeg
-    ├── Lover.html
-    ├── Lover.jpeg
-    ├── Made in the A.M.html
-    ├── Made in the A.M.jpeg
-    ├── maroon1.png
-    ├── maroon2.jpg
-    ├── maroon3.png
-    ├── maroon4.jpg
-    ├── maroon5.jpg
-    ├── maroon5.png
-    ├── maroon_album.html
-    ├── maroon logo.jpeg
-    ├── Midnight Memories.html
-    ├── Midnights.html
-    ├── Midnights.jpeg
-    ├── Moosetape.html
-    ├── Moosetape.jpeg
-    ├── mossewala.jpg
-    ├── navbarabout.js
-    ├── navbar.js
-    ├── navbarsong.js
-    ├── No Name.html
-    ├── No Name.jpeg
-    ├── one8.jpeg
-    ├── one8 logo.png
-    ├── one8_main.jpeg
-    ├── PBX 1.html
-    ├── PBX 1.jpeg
-    ├── Reputation.html
-    ├── Reputation.jpeg
-    ├── search.html
-    ├── search.js
-    ├── sidhu1.jpg
-    ├── sidhu2.jpg
-    ├── sidhu3.jpg
-    ├── sidhu4.jpg
-    ├── sidhu_album.html
-    ├── Sidhu.jpeg
-    ├── Snitches Get Stitches.html
-    ├── Snitches Get Stitches.jpeg
-    ├── So High.html
-    ├── song1.jpg
-    ├── song2.jpeg
-    ├── song3.jpeg
-    ├── Songs About Jane.html
-    ├── Songs About Jane.jpeg
-    ├── songs.css
-    ├── songs.html
-    ├── spotlight.html
-    ├── spotlight.js
-    ├── Take Me Home.html
-    ├── Take Me Home.jpeg
-    ├── taylor1.png
-    ├── taylor2.png
-    ├── taylor3.jpg
-    ├── taylor4.jpg
-    ├── taylor5.jpg
-    ├── taylor_album.html
-    ├── Taylor.jpeg
-    ├── taylor-spotlight1.jpg
-    ├── taylor-swift.jpg
-    ├── The Fourth World.html
-    ├── The Fourth World.jpeg
-    ├── tryy.html
-    ├── typingeffabout.js
-    ├── Up All Night.html
-    ├── Up All Night.jpeg
-    ├── V.html
-    └── V.jpeg
+    ├── main.py
+    ├── playlist.db
+    ├── static
+    │   ├── 1d1.jpg
+    │   ├── 1d2.webp
+    │   ├── 1d3.png
+    │   ├── 1d4.jpg
+    │   ├── 1direction.jpg
+    │   ├── about.css
+    │   ├── Ameya.jpg
+    │   ├── Arijit.jpeg
+    │   ├── Ashwin.jpeg
+    │   ├── dragons1.jpeg
+    │   ├── dragons2.jpeg
+    │   ├── dragons3.jpg
+    │   ├── dragons4.png
+    │   ├── dragons5.jpg
+    │   ├── dragons.jpg
+    │   ├── ed1.png
+    │   ├── ed2.png
+    │   ├── ed3.png
+    │   ├── ed4.png
+    │   ├── ed5.png
+    │   ├── Ed.jpeg
+    │   ├── ed.jpg
+    │   ├── Fearless.jpeg
+    │   ├── Folklore.jpeg
+    │   ├── Four.jpeg
+    │   ├── It Wont Be Soon Before.jpeg
+    │   ├── Jordi.jpeg
+    │   ├── Lover.jpeg
+    │   ├── Made in the A.M.jpeg
+    │   ├── maroon1.png
+    │   ├── maroon2.jpg
+    │   ├── maroon3.png
+    │   ├── maroon4.jpg
+    │   ├── maroon5.jpg
+    │   ├── maroon5.png
+    │   ├── maroon logo.jpeg
+    │   ├── Midnights.jpeg
+    │   ├── Moosetape.jpeg
+    │   ├── mossewala.jpg
+    │   ├── navbarabout.js
+    │   ├── navbar.js
+    │   ├── navbarsong.js
+    │   ├── No Name.jpeg
+    │   ├── one8.jpeg
+    │   ├── one8 logo.png
+    │   ├── one8_main.jpeg
+    │   ├── PBX 1.jpeg
+    │   ├── playlist.js
+    │   ├── Reputation.jpeg
+    │   ├── search.js
+    │   ├── sidhu1.jpg
+    │   ├── sidhu2.jpg
+    │   ├── sidhu3.jpg
+    │   ├── sidhu4.jpg
+    │   ├── Sidhu.jpeg
+    │   ├── Snitches Get Stitches.jpeg
+    │   ├── song1.jpg
+    │   ├── song2.jpeg
+    │   ├── song3.jpeg
+    │   ├── Songs About Jane.jpeg
+    │   ├── songs.css
+    │   ├── songs.js
+    │   ├── spotlight.js
+    │   ├── Take Me Home.jpeg
+    │   ├── taylor1.png
+    │   ├── taylor2.png
+    │   ├── taylor3.jpg
+    │   ├── taylor4.jpg
+    │   ├── taylor5.jpg
+    │   ├── Taylor.jpeg
+    │   ├── taylor-spotlight1.jpg
+    │   ├── taylor-swift.jpg
+    │   ├── The Fourth World.jpeg
+    │   ├── typingeffabout.js
+    │   ├── Up All Night.jpeg
+    │   └── V.jpeg
+    └── templates
+        ├── 1direction_album.html
+        ├── about.html
+        ├── dragons-1.html
+        ├── dragons-2.html
+        ├── dragons-3.html
+        ├── dragons-4.html
+        ├── dragons-5.html
+        ├── dragons_album.html
+        ├── ed-1.html
+        ├── ed-2.html
+        ├── ed-3.html
+        ├── ed-4.html
+        ├── ed-5.html
+        ├── ed_album.html
+        ├── Fearless.html
+        ├── Folklore.html
+        ├── Four.html
+        ├── home.html
+        ├── It Wont Be Soon Before.html
+        ├── Jordi.html
+        ├── Lover.html
+        ├── Made in the A.M.html
+        ├── maroon_album.html
+        ├── Midnight Memories.html
+        ├── Midnights.html
+        ├── Moosetape.html
+        ├── No Name.html
+        ├── PBX 1.html
+        ├── play.html
+        ├── Reputation.html
+        ├── search.html
+        ├── sidhu_album.html
+        ├── Snitches Get Stitches.html
+        ├── So High.html
+        ├── Songs About Jane.html
+        ├── songs.html
+        ├── spotlight.html
+        ├── Take Me Home.html
+        ├── taylor_album.html
+        ├── The Fourth World.html
+        ├── tryy.html
+        ├── Up All Night.html
+        └── V.html
 
-1 directory, 118 files
+3 directories, 123 files
+
 ```

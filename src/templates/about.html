@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head><title>About Us</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='about.css')}}">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fasthand&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="logo">
+            <img class="logo-pic "src="{{url_for('static',filename='one8 logo.png')}}">
+        </div>
+        <div class="navi-bar">
+            <div class="containerh">
+               <a href="{{url_for('home')}}">Home</a>
+            </div>
+            <div class="container">
+                <a href="{{url_for('tryy')}}">Artists</a>
+            </div>
+            <div class="a" id="about">
+                <a href="{{url_for('about')}}">About</a>
+            </div>
+            <div id="search">
+                <a href="{{url_for('search')}}">Search</a>
+            </div>
+            <div id="spotlight">
+                <a href="{{url_for('spotlight')}}">Spotlight</a>
+            </div>
+            <div id="playlist">
+                <a href="{{url_for('play')}}">Playlist</a>
+            </div>
+        </div>
+        <div class="site-title">
+            <div class="header1"> About the site</div>
+            One8 music is an easy-to-use and robust platform to listen to music composed and sung by some of 
+            the best artists in the world which would ofcourse include your favourite ones too.
+            Music is something that touches the soul and calms the mind and that is the motivation behind One8 music.
+            The interface has been made soothing and aesthetic so that one feels calmed while listening to their favourite artists.<br>
+            Happy Listening!!
+        </div>
+        <div class="creator-title">
+            <div class="header1">About the creators</div>
+            <div class="creator-column">
+                <div class="creator1">
+                    <img class="photo1" src="{{url_for('static',filename='Ashwin.jpeg')}}">
+                    <div class="info1">
+                    </div>
+                </div>
+                <div class="creator2">
+                    <div class="info2">
+                    </div>
+                    <img class="photo2" src="{{url_for('static',filename='Ameya.jpg')}}">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot">
+                About
+            </div>
+            <div>
+                Created by Ok_18..A Virat Kohli Fan Club!
+            </div>
+        </div>
+        <script src="{{url_for('static',filename='navbarabout.js')}}"></script>
+        <script src="{{url_for('static',filename='typingeffabout.js')}}"></script>
+    </body>
+</html>
