@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Sidhu Moosewala Albums</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+        <style>
+body{
+                background-image: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                background-size:cover;
+            }
+
+            .logo{
+                display: inline-block;
+                margin-left: 0;
+                margin-right: 50px;
+            }
+            .album-row:hover{
+             opacity: 0.4;
+            background-color:aquamarine;
+        }
+
+            .logo-img{
+                display: inline-block;
+                height: 140px;
+                margin-left: 0;
+            }
+
+            .logo-img:hover{
+                opacity: 0.4;
+                transition: 0.25s;
+                cursor: pointer;
+                filter: drop-shadow(5px 5px 10px rgb(193, 193, 78));
+
+            }
+
+            .artist{
+                display: inline-block;
+                vertical-align: top;
+                width: 300px;
+                background-color: grey;
+                border-radius: 800px;
+                margin-left:40px;
+                margin-right: 5px;
+                margin-bottom: 70px;
+                margin-top: 60px;
+            }
+
+
+            .artist-pic{
+                width: 300px;
+                height: 200px;
+                border-radius:280px;
+                object-fit: cover;
+                object-position: top;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 25px;
+            }
+
+            .logo-text {
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Permanent Marker;
+            font-weight: 700;
+            font-style: bold;
+            margin-top: 100px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            font-size: 120px;
+            margin-right: 50px;
+        }
+
+        .logo-text:hover {
+            color:darkslategrey;
+            transition: 0.75s;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .logo-slide {
+            white-space: nowrap;
+            
+            font-size: 18px;
+            position: absolute;
+            overflow: hidden;
+            display: inline-block;
+            top: 50%;
+            left: 50%;
+            color: black;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        .navi-bar {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            z-index: 100;
+            opacity: 0.8;
+            border-radius: 70%;
+            background-color: transparent;
+            right: 0px;
+            margin-right: 30px;
+            top: 0px;
+        }
+
+    
+        .navi-bar div {
+            color: white;
+            flex: 1;
+            text-align: center;
+            /* border-radius: 30%; */
+            /* background-color:black; */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 21px;
+            padding: 10px;
+            /* 
+            padding-left: 150px; */
+            opacity: 0.8;
+            margin-right: 10px;
+            padding: 15px;
+        }
+
+        .navi-bar div:hover {
+            cursor: pointer;
+            background-color: black;
+        }
+
+        .head-css {
+            color: white;
+            text-decoration: none;
+            
+        }
+        .logo-text:hover .overlay3{
+            bottom: 850px;
+            height: 7%;
+            opacity: 0.6;
+        }
+
+        .overlay3{
+            position: absolute;
+            bottom: 100%;
+            left: 60;
+            right: 0;
+            background-color: aquamarine;
+            overflow:hidden;
+            width: 30%;
+            height: 0;
+            transition: 1s;
+        }
+
+        .album-row{
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom:40px;
+            margin-left: 20px;
+            margin-right: 58px;
+            width: 864px;
+            height: 230px;
+            /* background-color: darkslategrey; */
+            border-radius: px;
+            /* background-color: rgb(17, 36, 36); */
+            /* filter:blur(0px);
+            opacity: 0.6;
+            background-color:black; */
+            /* background-color: grey; */
+        }
+
+        .album-pic{
+            width: 250px;
+            height: 230px;
+            border-radius: 0px;
+        }
+
+        .album-pic:hover{
+            border-radius: 90px;
+            opacity: 0.8;
+        }
+
+        .first-pic{
+            display: inline-block;
+            width:250px;
+            height:230px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .name{
+            display: inline-block;
+            height: 230px;
+            margin-left: 10px;
+            border-radius: 50px;
+            width: 600px;
+
+            filter:blur(0px);
+            opacity: 0.6;
+            background-color:black;
+            vertical-align: top;
+        }
+        .album-name{
+            color: white;
+            display: inline-block;
+            margin-left: 50px;
+            font-size: 45px;
+            width: 500px;
+            margin-bottom: 0px;
+        }
+        .time,.total-songs{
+            color:silver;
+            font-size: 27px;
+            font-weight: 700;
+            margin-top: 0px;  
+            margin-left: 50px;     
+        }
+
+        .time{
+            margin-top:px;
+        }
+
+        .album-name:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            /* color; */
+        }
+        .footer {
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+        }
+
+        .footer div {
+            flex: 1;
+            background-color: rgb(85, 115, 115);
+            color: white;
+            opacity: 0.6;
+            font-family: Arial;
+            font-size: 20px;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .foot:hover {
+            cursor: pointer;
+            background-color: grey;
+            text-decoration: none;
+        }
+
+        .foot-text {
+            text-decoration: none;
+            color: white;
+        }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="logo">
+            <img class="logo-img" src="one8.jpeg">
+        </div>
+        <div class="artist">
+            <img class="artist-pic" src="mossewala.jpg">
+        </div>
+        <div class="logo-text">
+            Sidhu Moosewala
+            <div class="overlay3">
+                <div class="logo-slide">
+                    Welcome to the page, here are your top albums of your favourite artists !
+                </div>
+            </div>
+        </div>
+        <div class="navi-bar">
+            <a href="home.html">
+                <div class="containerh">
+                    <i class="fa fa-home" style="font-size:36px"></i>
+                    <a class="head-css" href="home.html">Home</a>
+                </div>
+            </a>
+            <a href="tryy.html">
+                <div class="container">
+                    <i class="fa fa-user" style="font-size:36px"></i>
+                    <a class="head-css" href="tryy.html">Artists</a>
+                </div>
+            </a>
+            <a href="about.html">
+                <div class="container" id="about">
+                    <i class="fa fa-info-circle" style="font-size:36px"></i><br>
+                    <a class="head-css" href="about.html">About</a>
+                </div>
+            </a>
+            <a href="">
+                <div class="container" id="search">
+                    <i class="fa fa-search" style="font-size:36px"></i><br>
+                    <a class="head-css" href="search.html">Search</a>
+                </div>
+            </a>
+            <a href="">
+                <div class="container" id="spotlight">
+                    <i class="fa fa-user-circle" style="font-size:36px"></i><br>
+                    <a class="head-css" href="spotlight.html">Spotlight</a>
+                </div>
+            </a>
+        </div>
+    
+        <div class="album-row">
+            <div class="first-pic">
+                <img class="album-pic" src="sidhu1.jpg">
+            </div>
+
+            <div class="name">
+                <p class="album-name">
+                    <a href="Moosetape.html" style="color:white;text-decoration: none;">Moosetape</a>
+                </p>
+                <p class="total-songs">
+                    5 songs
+                </p>
+                <p class="time">
+                    Year : 2021
+                </p>
+            </div>
+        </div>
+
+        <div class="album-row">
+            <div class="first-pic">
+                <img class="album-pic" src="sidhu2.jpg">
+            </div>
+
+            <div class="name">
+                <p class="album-name">
+                    <a href="PBX 1.html" style="color:white;text-decoration: none;">PBX 1</a>
+                </p>
+                <p class="total-songs">
+                    5 songs
+                </p>
+                <p class="time">
+                    Year : 2018
+                </p>
+            </div>
+        </div>
+
+        <div class="album-row">
+            <div class="first-pic">
+                <img class="album-pic" src="sidhu3.jpg">
+            </div>
+
+            <div class="name">
+                <p class="album-name">
+                    <a href="No Name.html" style="color:white;text-decoration: none;">No Name</a>
+                </p>
+                <p class="total-songs">
+                    5 songs
+                </p>
+                <p class="time">
+                    Year : 2022
+                </p>
+            </div>
+        </div>
+
+        <div class="album-row">
+            <div class="first-pic">
+                <img class="album-pic" src="sidhu4.jpg">
+            </div>
+
+            <div class="name">
+                <p class="album-name">
+                    <a href="Snitches Get Stitches.html" style="color:white;text-decoration: none;">Snitches Get Sticthes</a>
+                </p>
+                <p class="total-songs">
+                    5 songs
+                </p>
+                <p class="time">
+                    Year : 2020
+                </p>
+            </div>
+        </div>
+        <div class="album-row">
+            <div class="first-pic">
+                <img class="album-pic" src="https://i.scdn.co/image/ab67616d0000b27381147967238f0ea124675407">
+            </div>
+
+            <div class="name">
+                <p class="album-name">
+                    <a href="So High.html" style="color:white;text-decoration: none;">So High</a>
+                </p>
+                <p class="total-songs">
+                    5 songs
+                </p>
+                <p class="time">
+                    Year : 2017
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot">
+                <a class="foot-text" href="about.html">About</a>
+            </div>
+            <div class="about-info">
+                Created by Ok_18...A Virat Kohli Fan Club!
+            </div>
+        </div>
+        <script src="navbar.js"></script>
+    </body>
+</html>

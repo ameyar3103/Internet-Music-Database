@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html></html>
+<head><title>One8 Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: contain;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-left: 380px;
+            margin-right: 0px;
+            vertical-align: top;
+            opacity: 0.8;
+            transition: transform .4s;
+        }
+        
+        .details {
+            text-align: center;
+        }
+
+        .logo-img {
+            height: 120px;
+            display: inline-block;
+        }
+
+        .navi-bar {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            z-index: 100;
+            opacity: 0.8;
+            border-radius: 70%;
+            background-color: transparent;
+            right: 0px;
+            margin-right: 30px;
+            top: 0px;
+        }
+
+        .containerh {
+            border-bottom-color:white ;
+            border-bottom-style: solid;
+            border-bottom-width:10px;
+        }
+        .navi-bar div {
+            color: white;
+            flex: 1;
+            text-align: center;
+            /* border-radius: 30%; */
+            /* background-color:black; */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            padding: 10px;
+            /* 
+            padding-left: 150px; */
+            opacity: 0.8;
+            margin-right: 10px;
+            padding: 15px;
+        }
+
+        .navi-bar div:hover {
+            cursor: pointer;
+        }
+
+        .head-css {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        /* .link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        z-index: 1;
+    } */
+        .head-album {
+            text-decoration: none;
+            color: white;
+            font-size: 60px;
+            margin-left: 100px;
+            margin-top: 900px;
+            margin-bottom: 630px;
+        }
+
+        .album-heading {
+            margin-bottom: 30px;
+            display: inline-block;
+            margin-right: 930px;
+            margin-top: 60px;
+
+        }
+
+        #extra {
+            margin-top: 100px;
+            margin-right: 30px;
+            margin-bottom: 50px;
+        }
+
+        .logo-text {
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Permanent Marker;
+            font-weight: 700;
+            font-style: bold;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 130px;
+            font-size: 120px;
+            margin-right: 500px;
+        }
+
+        .logo-text:hover {
+            color: darkslategrey;
+            transition: 0.75s;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .image {
+            height: 330px;
+            width: 400px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 700px;
+            margin-bottom: none;
+        }
+
+
+        .more-info:hover {
+            color: black;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .image-row {
+            margin-bottom: 5px;
+        }
+
+        .info-artist {
+            display: inline-block;
+            text-decoration: none;
+            /* margin-left: 100px; */
+            text-align: center;
+            /* padding-left: 44px; */
+            /* margin-right: 4px; */
+            margin-bottom: 14px;
+            vertical-align: bottom;
+            margin-top: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .info-artist:hover {
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            transition: 0.75s;
+        }
+
+
+        .logo-img:hover {
+            opacity: 0.4;
+            transition: 0.25s;
+            cursor: pointer;
+            filter: drop-shadow(5px 5px 10px rgb(193, 193, 78));
+            transform: scale(0.6);
+        }
+
+        .main-circle {
+            display: block;
+            margin-left: 100px;
+            width: 2330px;
+        }
+
+        .box {
+            display: inline-block;
+            width: 400px;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-bottom: 5px;
+            margin-top: 0px;
+            transition: transform .2s;
+            border-color: black;
+            border-width: 2px;
+            background-color: grey;
+            border-radius: 800px;
+            vertical-align: top;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+
+        .overlay1 {
+            position: absolute;
+            overflow: hidden;
+            bottom: 1;
+            left: auto;
+            right: auto;
+            background-color: black;
+            width: 15%;
+            height: 0;
+            transition: 1s;
+            border-radius: 1000px;
+            opacity: 1 !important;
+        }
+
+        .more-info:hover .overlay1 {
+            bottom: 30;
+            height: 5%;
+            opacity: 1
+        }
+
+        .logo-text:hover .overlay2 {
+            bottom: 830px;
+            height: 10%;
+            opacity: 0.6;
+        }
+
+        .logo-slide {
+            white-space: nowrap;
+
+            font-size: 26px;
+            position: absolute;
+            overflow: hidden;
+            display: inline-block;
+            top: 50%;
+            left: 50%;
+            color: black;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .slide-text {
+            white-space: nowrap;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            color: yellow;
+
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .more-info {
+            /* background-color:rgba(12, 62, 52, 0.819); */
+            background-color: rgb(63, 79, 25);
+
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            padding-left: 0px;
+            padding-right: 0px;
+            font-weight: 500;
+            opacity: 1;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .image:hover {
+            opacity: 0.5;
+            background-color: black;
+            transition: 0s;
+        }
+
+        .overlay2 {
+            position: absolute;
+            bottom: 100%;
+            left: 60;
+            right: 0;
+            background-color: aquamarine;
+            overflow: hidden;
+            width: 32%;
+            height: 0;
+            transition: 1s;
+        }
+
+        .main-circle {
+            margin-right: 0px;
+            display: inline-block;
+            width: 1700px;
+        }
+
+        .album-row:hover {
+            opacity: 0.4;
+            background-color: aquamarine;
+        }
+
+        .album-row {
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom: 40px;
+            margin-left: 40px;
+            margin-right: 38px;
+            width: 864px;
+            height: 230px;
+            /* background-color: darkslategrey; */
+            border-radius: px;
+            /* background-color: rgb(17, 36, 36); */
+            /* filter:blur(0px);
+            opacity: 0.6;
+            background-color:black; */
+            /* background-color: grey; */
+        }
+
+        .album-pic {
+            width: 250px;
+            height: 230px;
+            border-radius: 0px;
+        }
+
+        .album-pic:hover {
+            border-radius: 90px;
+            opacity: 0.8;
+        }
+
+        .first-pic {
+            display: inline-block;
+            width: 250px;
+            height: 230px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .name {
+            display: inline-block;
+            height: 230px;
+            margin-left: 10px;
+            border-radius: 50px;
+            width: 600px;
+
+            filter: blur(0px);
+            opacity: 0.6;
+            background-color: black;
+            vertical-align: top;
+        }
+
+        .name {
+            border-radius: 0px;
+        }
+
+        .album-name {
+            color: white;
+            display: inline-block;
+            margin-left: 50px;
+            margin-top: 50px;
+            font-size: 44px;
+            width: 500px;
+            margin-bottom: 0px;
+
+        }
+
+        .time,
+        .total-songs {
+            color: silver;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0px;
+            margin-left: 50px;
+        }
+
+        .time {
+            margin-top: px;
+        }
+
+        .album-name:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            /* color; */
+        }
+
+        .img-song {
+            height: 400px;
+            width: 400px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .song-row {
+            display: inline-block;
+            height: 480px;
+            width: 420px;
+            transition: transform .2s;
+            background-color: grey;
+            border-radius: 0px;
+            margin-right: 100px;
+            margin-left: 100px;
+            margin-bottom: 80px;
+        }
+
+        .song-row:hover {
+            transform: scale(0.75);
+        }
+
+        #song_space {
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .song-info-name {
+            font-weight: 700;
+            font-size: 27px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+        .song-info-artist {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+        }
+
+        .footer div {
+            flex: 1;
+            background-color: rgb(85, 115, 115);
+            color: white;
+            opacity: 0.6;
+            font-family: Arial;
+            font-size: 20px;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .foot:hover {
+            cursor: pointer;
+            background-color: grey;
+            text-decoration: none;
+        }
+
+        .foot-text {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="album-heading" id="extra">
+        <a href="tryy.html" class="head-album">
+            Top Artists
+        </a>
+    </div>
+    <div class="logo">
+        <img class="logo-img" src="one8_main.jpeg">
+    </div>
+
+    <div class="navi-bar">
+        <a href="home.html">
+            <div class="containerh">
+                <i class="fa fa-home" style="font-size:36px"></i>
+                <a class="head-css" href="home.html">Home</a>
+            </div>
+        </a>
+        <a href="tryy.html">
+            <div class="container">
+                <i class="fa fa-user" style="font-size:36px"></i>
+                <a class="head-css" href="tryy.html">Artists</a>
+            </div>
+        </a>
+        <a href="about.html">
+            <div class="container" id="about">
+                <i class="fa fa-info-circle" style="font-size:36px"></i><br>
+                <a class="head-css" href="about.html">About</a>
+            </div>
+        </a>
+        <a href="">
+            <div class="container" id="search">
+                <i class="fa fa-search" style="font-size:36px"></i><br>
+                <a class="head-css" href="search.html">Search</a>
+            </div>
+        </a>
+        <a href="">
+            <div class="container" id="spotlight">
+                <i class="fa fa-user-circle" style="font-size:36px"></i><br>
+                <a class="head-css" href="spotlight.html">Spotlight</a>
+            </div>
+        </a>
+    </div>
+
+    <div class="main-circle">
+        <div class="box">
+            <div class="image-row">
+                <img class="image" src="ed.jpg">
+            </div>
+
+            <div class="details">
+                <!-- <p class="info-artist"> -->
+                <a href="ed_album.html" class="info-artist">Ed Sheeran</a>
+                <!-- </p> -->
+            </div>
+
+        </div>
+
+        <div class="box">
+            <div class="image-row">
+                <img class="image" src="1direction.jpg">
+            </div>
+
+            <div class="details">
+                <a href="1direction_album.html".html" class="info-artist">One Direction</a>
+            </div>
+        </div>
+
+        <div class="box" id="taylor-box">
+            <div class="image-row">
+                <img class="image" src="mossewala.jpg">
+            </div>
+
+
+            <div class="details">
+                <a href="sidhu_album.html" class="info-artist">Sidhu Moosewala</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="album-heading">
+        <a href="tryy.html" class="head-album">
+            Top Albums
+        </a>
+    </div>
+
+
+
+
+
+
+    <div class="album-row">
+        <div class="first-pic">
+            <img class="album-pic" src="1d3.png">
+        </div>
+
+        <div class="name">
+            <p class="album-name">
+                <a href="Take Me Home.html" style="color:white;text-decoration: none;">Take Me Home</a>
+            </p>
+            <p class="total-songs">
+                5 songs
+            </p>
+            <p class="time">
+                Year : 2012
+            </p>
+        </div>
+    </div>
+
+    <div class="album-row">
+        <div class="first-pic">
+            <img class="album-pic" src="maroon3.png">
+        </div>
+
+        <div class="name">
+            <p class="album-name">
+                <a href="It Won't Be Soon Before.html" style="color:white;text-decoration: none;">It Won't Be Home Soon Before</a>
+            </p>
+            <p class="total-songs">
+                5 songs
+            </p>
+            <p class="time">
+                Year : 2011
+            </p>
+        </div>
+    </div>
+
+    <div class="album-row">
+        <div class="first-pic">
+            <img class="album-pic" src="sidhu2.jpg">
+        </div>
+
+        <div class="name">
+            <p class="album-name">
+                <a href="PBX 1.html" style="color:white;text-decoration: none;">PBX 1</a>
+            </p>
+            <p class="total-songs">
+                5 songs
+            </p>
+            <p class="time">
+                Year : 2018
+            </p>
+        </div>
+    </div>
+
+    <div class="album-heading" id="song_space">
+        <a href="" class="head-album">
+            Top Songs
+        </a>
+    </div>
+
+
+    <div class="song-row">
+        <div class="song-image">
+            <img class="img-song" src="song3.jpeg">
+        </div>
+
+        <div class="info">
+            <p class="song-info-name">
+                Stereo Hearts
+            </p>
+            <p class="song-info-artist">
+                Maroon 5
+            </p>
+        </div>
+
+    </div>
+    <div class="song-row">
+        <div class="song-image">
+            <img class="img-song" src="song2.jpeg">
+        </div>
+        <div class="info">
+            <p class="song-info-name">
+                Demons
+            </p>
+            <p class="song-info-artist">
+                Imagine Dragons
+            </p>
+        </div>
+    </div>
+    <div class="song-row">
+        <div class="song-image">
+            <img class="img-song" src="song1.jpg">
+        </div>
+        <div class="info">
+            <p class="song-info-name">
+                295
+            </p>
+            <p class="song-info-artist">
+                Sidhu Moosewala
+            </p>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="foot">
+            <a class="foot-text" href="about.html">About</a>
+        </div>
+        <div class="about-info">
+            Created by Ok_18...A Virat Kohli Fan Club!
+        </div>
+    </div>
+<script src="navbar.js"></script>
+</body>
+
+</html>
